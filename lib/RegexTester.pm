@@ -15,6 +15,28 @@ sub openPath {
 	return $fh;
 }
 
+sub fhToRegexp {
+	my $fh = shift;
+	warn "compiling to single OR regex";
+
+	my $str = "(";
+	my $c;
+	while(my $line = <$fh>) {
+		if( (++$c % 100_000) == 0) {
+			print STDERR localtime . " processed: $c\r";
+		}
+		chomp($line);
+		if(!acceptLine($line)) {
+			next;
+		}
+		$str .= quotemeta(lc($line))."|";
+	}
+	chop($str);
+	$str .= ")";
+
+	return qr/$str/;
+}
+
 ## compile each line into separate regex
 sub fhToRegexpList {
 	my $fh = shift;

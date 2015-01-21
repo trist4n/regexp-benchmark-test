@@ -1,0 +1,36 @@
+(09:33 PM):(tristan@ogedai)~/git/regexp-benchmark-test$ perl builtinregex_joined.pl business_names_register_2014.txt.gz 'http://en.wikipedia.org/wiki/Melbourne'
+opening business_names_register_2014.txt.gz at //home/tristan/git/regexp-benchmark-test/lib/RegexTester.pm line 13.
+compiling to single OR regex at //home/tristan/git/regexp-benchmark-test/lib/RegexTester.pm line 20.
+fetching http://en.wikipedia.org/wiki/Melbourne at //home/tristan/git/regexp-benchmark-test/lib/RegexTester.pm line 87, <$fh> line 2174272.
+Wed Jan 21 21:34:18 2015: test #0
+matched! at builtinregex_joined.pl line 23, <$fh> line 2174272.
+#0 took: 9.155693
+Wed Jan 21 21:34:27 2015: test #1
+matched! at builtinregex_joined.pl line 23, <$fh> line 2174272.
+#1 took: 9.154957
+Wed Jan 21 21:34:37 2015: test #2
+matched! at builtinregex_joined.pl line 23, <$fh> line 2174272.
+#2 took: 9.153194
+Wed Jan 21 21:34:46 2015: test #3
+matched! at builtinregex_joined.pl line 23, <$fh> line 2174272.
+#3 took: 9.152415
+Wed Jan 21 21:34:55 2015: test #4
+matched! at builtinregex_joined.pl line 23, <$fh> line 2174272.
+#4 took: 9.15111
+Wed Jan 21 21:35:04 2015: test #5
+matched! at builtinregex_joined.pl line 23, <$fh> line 2174272.
+#5 took: 9.150649
+Wed Jan 21 21:35:13 2015: test #6
+matched! at builtinregex_joined.pl line 23, <$fh> line 2174272.
+#6 took: 9.152429
+Wed Jan 21 21:35:22 2015: test #7
+matched! at builtinregex_joined.pl line 23, <$fh> line 2174272.
+#7 took: 9.151466
+Wed Jan 21 21:35:31 2015: test #8
+matched! at builtinregex_joined.pl line 23, <$fh> line 2174272.
+#8 took: 9.150061
+Wed Jan 21 21:35:41 2015: test #9
+matched! at builtinregex_joined.pl line 23, <$fh> line 2174272.
+#9 took: 9.150913
+did 10 runs
+average runtime: 9.1522887
