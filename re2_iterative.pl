@@ -1,9 +1,8 @@
 #!/usr/bin/perl
 use strict;
 use warnings;
-use re::engine::RE2 -strict => 1;
 use Carp;
-use RegexTester;
+use RegexTesterRE2;
 use Time::HiRes qw(gettimeofday tv_interval);
 
 my ($corpus,$page) = @ARGV;
@@ -11,9 +10,9 @@ unless($corpus && $page) {
 	croak "need ./script corpus.txt http://pagetoload.com";
 }
 
-my $fh = RegexTester::openPath($corpus);
-my @regexs = RegexTester::fhToRegexpList($fh);
-my $pageData = RegexTester::fetchPage($page);
+my $fh = RegexTesterRE2::openPath($corpus);
+my @regexs = RegexTesterRE2::fhToRegexpList($fh);
+my $pageData = RegexTesterRE2::fetchPage($page);
 
 my ($total,$num);
 TESTER: for (my $i = 0; $i < 10; $i++) {

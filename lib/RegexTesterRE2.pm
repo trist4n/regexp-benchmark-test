@@ -1,4 +1,4 @@
-package RegexTester;
+package RegexTesterRE2;
 use strict;
 use warnings;
 use re::engine::RE2 -strict => 1;

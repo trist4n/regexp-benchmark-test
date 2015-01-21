@@ -11,19 +11,18 @@ unless($corpus && $page) {
 }
 
 my $fh = RegexTesterRE2::openPath($corpus);
-my @regexs = RegexTesterRE2::fhToRegexpList($fh);
+my $regex = RegexTesterRE2::fhToAsRegexp($fh);
 my $pageData = RegexTesterRE2::fetchPage($page);
 
 my ($total,$num);
 TESTER: for (my $i = 0; $i < 10; $i++) {
 	print STDERR localtime . ": test #$i\n";
 	my $start = [gettimeofday];
-	MATCHER: for(my $ri=0; $ri <= $#regexs; $ri++) {
-		if($pageData =~ $regexs[$ri]) {
-			warn "matched $regexs[$ri]";
-			last MATCHER;
-		}
+
+	if($pageData =~ $regex) {
+		warn "matched!";
 	}
+
 	my $delt = tv_interval ( $start, [gettimeofday]);
 	$total += $delt; $num++;
 	print STDERR "#$i took: $delt\n"; 
