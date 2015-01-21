@@ -1,0 +1,38 @@
+(09:24 PM):(tristan@ogedai)~/git/regexp-benchmark-test$ perl builtinregex_iterative.pl business_names_register_2014.txt.gz 'http://en.wikipedia.org/wiki/Melbourne'
+opening business_names_register_2014.txt.gz at //home/tristan/git/regexp-benchmark-test/lib/RegexTester.pm line 13.
+compiling to list of regexps at //home/tristan/git/regexp-benchmark-test/lib/RegexTester.pm line 21.
+Wed Jan 21 21:24:56 2015 processed: 2100000
+fetching http://en.wikipedia.org/wiki/Melbourne at //home/tristan/git/regexp-benchmark-test/lib/RegexTester.pm line 65, <$fh> line 2174272.
+Wed Jan 21 21:25:00 2015: test #0
+matched (?^:21st\ century) at builtinregex_iterative.pl line 23, <$fh> line 2174272.
+#0 took: 3.520182
+Wed Jan 21 21:25:03 2015: test #1
+matched (?^:21st\ century) at builtinregex_iterative.pl line 23, <$fh> line 2174272.
+#1 took: 3.520254
+Wed Jan 21 21:25:07 2015: test #2
+matched (?^:21st\ century) at builtinregex_iterative.pl line 23, <$fh> line 2174272.
+#2 took: 3.520067
+Wed Jan 21 21:25:10 2015: test #3
+matched (?^:21st\ century) at builtinregex_iterative.pl line 23, <$fh> line 2174272.
+#3 took: 3.519724
+Wed Jan 21 21:25:14 2015: test #4
+matched (?^:21st\ century) at builtinregex_iterative.pl line 23, <$fh> line 2174272.
+#4 took: 3.519585
+Wed Jan 21 21:25:17 2015: test #5
+matched (?^:21st\ century) at builtinregex_iterative.pl line 23, <$fh> line 2174272.
+#5 took: 3.519422
+Wed Jan 21 21:25:21 2015: test #6
+matched (?^:21st\ century) at builtinregex_iterative.pl line 23, <$fh> line 2174272.
+#6 took: 3.519185
+Wed Jan 21 21:25:25 2015: test #7
+matched (?^:21st\ century) at builtinregex_iterative.pl line 23, <$fh> line 2174272.
+#7 took: 3.519925
+Wed Jan 21 21:25:28 2015: test #8
+matched (?^:21st\ century) at builtinregex_iterative.pl line 23, <$fh> line 2174272.
+#8 took: 3.520482
+Wed Jan 21 21:25:32 2015: test #9
+matched (?^:21st\ century) at builtinregex_iterative.pl line 23, <$fh> line 2174272.
+#9 took: 3.520168
+
+did 10 runs
+average runtime: 3.5198994
