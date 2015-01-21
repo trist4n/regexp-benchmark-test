@@ -44,10 +44,9 @@ sub acceptLine {
 
 	## allow alphanum words and combinations thereof
 	state $lineFilterer ||= qr/(\w+(\s+)?)+/;
-	if($line =~ $lineFilterer) {
+	if( (length($line) > 5) && ($line =~ $lineFilterer)) {
 		return 1;
 	}
-	warn "nope: $line";
 	return;
 }
 
