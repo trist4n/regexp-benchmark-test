@@ -1,4 +1,4 @@
-(09:24 PM):(tristan@ogedai)~/git/regexp-benchmark-test$ perl builtinregex_iterative.pl business_names_register_2014.txt.gz 'http://en.wikipedia.org/wiki/Melbourne'
+(09:24 PM):(tristan@ogedai)~/git/regexp-benchmark-test$ perl builtinregex_iterative_lazy.pl business_names_register_2014.txt.gz 'http://en.wikipedia.org/wiki/Melbourne'
 opening business_names_register_2014.txt.gz at //home/tristan/git/regexp-benchmark-test/lib/RegexTester.pm line 13.
 compiling to list of regexps at //home/tristan/git/regexp-benchmark-test/lib/RegexTester.pm line 21.
 Wed Jan 21 21:24:56 2015 processed: 2100000

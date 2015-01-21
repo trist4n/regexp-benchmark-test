@@ -21,6 +21,7 @@ TESTER: for (my $i = 0; $i < 10; $i++) {
 	MATCHER: for(my $ri=0; $ri <= $#regexs; $ri++) {
 		if($pageData =~ $regexs[$ri]) {
 			warn "matched $regexs[$ri]";
+			last MATCHER;
 		}
 	}
 	my $delt = tv_interval ( $start, [gettimeofday]);
