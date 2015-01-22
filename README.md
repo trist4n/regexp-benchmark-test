@@ -16,7 +16,7 @@ perls builtin regexp engine
 googles re2 regexp engine
 -------------------------
 * iterate over each regexp (lazy stop on first match): 3.5361075 seconds
-* iterate over each regexp: 
+* iterate over each regexp: 1424.064551 seconds (.......)
 * one big (thing|thing2) regexp:
 * one big assembled (Regexp::Assemble) regexp:
 
