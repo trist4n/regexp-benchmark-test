@@ -1,9 +1,9 @@
 package RegexTester;
 use strict;
 use warnings;
-use re::engine::RE2 -strict => 1;
 use Carp;
 use Regexp::Assemble;
+use Regexp::Assemble::Compressed;
 use LWP::UserAgent;
 use PerlIO::gzip;
 use feature 'state';
@@ -15,6 +15,26 @@ sub openPath {
 	warn "opening $path";
 	open(my $fh, "<:gzip", $path) || croak($!);
 	return $fh;
+}
+
+sub fhToAsCRegexp {
+	my $fh = shift;
+	warn "assembling into giant or regexp";
+
+	my $ra = Regexp::Assemble::Compressed->new;
+	my $c;
+	while(my $line = <$fh>) {
+		if( (++$c % 100_000) == 0) {
+			print STDERR localtime . " processed: $c\r";
+		}
+		chomp($line);
+		if(!acceptLine($line)) {
+			next;
+		}
+		$ra->add(quotemeta(lc($line)));
+	}
+
+	return $ra->re;
 }
 
 sub fhToAsRegexp {
