@@ -12,11 +12,4 @@ perls builtin regexp engine
 * iterate over each regexp: 865.303898 seconds (...)
 * one big (thing|thing2) regexp: 9.1522887 seconds
 * one big assembled (Regexp::Assemble) regexp: 0.0006374 seconds (?? seems suspicious but it matched)
-
-googles re2 regexp engine
--------------------------
-* iterate over each regexp (lazy stop on first match): 3.5361075 seconds
-* iterate over each regexp: 1424.064551 seconds (.......)
-* one big (thing|thing2) regexp:
-* one big assembled (Regexp::Assemble) regexp:
-
+* one big compressed assembled (Regexp::Assemble::Compressed) regexp: 0.0006388
